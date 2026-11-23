@@ -1,3 +1,90 @@
+/* Toda la aplicación */
 .root {
-    -fx-background-color: #F7F8FB;
+    -fx-font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #FFFDF7;
+}
+/* Menú lateral */
+.menu {
+    -fx-background-color: #2A0845;
+    -fx-padding: 24 18 24 18;
+    -fx-spacing: 12;
+    -fx-pref-width: 215;
+    -fx-border-color: #FFD166;
+    -fx-border-width: 0 3 0 0;
+}
+
+/* Título principal del menú */
+.logo {
+    -fx-text-fill: #FFD166;
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 18 6;
+}
+
+/* Botones del menú lateral */
+.menu .button {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+    -fx-text-fill: #FFF8E7;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 175;
+    -fx-alignment: center-left;
+    -fx-padding: 11 16 11 16;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+/* Efecto al pasar el mouse por el menú */
+.menu .button:hover {
+    -fx-background-color: #F72585;
+    -fx-text-fill: white;
+}
+
+/* Cada pantalla central */
+.pagina {
+    -fx-padding: 26;
+    -fx-spacing: 14;
+}
+
+/* Títulos de sección */
+.titulo {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #560BAD;
+}
+
+/* Subtítulos */
+.subtitulo {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0096C7;
+}
+
+/* Botones de acción principales (Guardar, Registrar, etc.) */
+.boton-principal {
+    -fx-background-color: #7209B7;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 9 18 9 18;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.boton-principal:hover {
+    -fx-background-color: #F72585;
+}
+
+/* Botones de eliminar */
+.boton-peligro {
+    -fx-background-color: #E63946;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 9 18 9 18;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.boton-peligro:hover {
+    -fx-background-color: #B51724;
 }
