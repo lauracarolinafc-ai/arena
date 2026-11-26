@@ -2,48 +2,76 @@
 .root {
     -fx-font-family: "Segoe UI", "Trebuchet MS", sans-serif;
     -fx-font-size: 14px;
-    -fx-background-color: #FFFDF7;
+    -fx-background-color: #0f0f0f;
 }
+/* CENEFA SUPERIOR */
+.cenefa {
+    -fx-pref-height: 16;
+    -fx-border-color: #D90429;
+    -fx-border-width: 0 0 2 0;
+}
+.cuadro-rojo {
+    -fx-background-color: #D90429; /* Rojo circo */
+}
+.cuadro-blanco {
+    -fx-background-color: #FFFFFF; /* Blanco */
+}
+
 /* Menú lateral */
 .menu {
     -fx-background-color: #2A0845;
-    -fx-padding: 24 18 24 18;
+    -fx-padding: 20 16 20 16;
     -fx-spacing: 12;
     -fx-pref-width: 215;
     -fx-border-color: #FFD166;
     -fx-border-width: 0 3 0 0;
 }
 
-/* Título principal del menú */
 .logo {
     -fx-text-fill: #FFD166;
-    -fx-font-size: 23px;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 16 2;
+}
+
+.sublogo {
+    -fx-text-fill: #FFD6DC;
+    -fx-font-size: 13px;
+    -fx-padding: 0 0 14 6;
+}
+/* Título principal del menú */
+.logo {
+    -fx-text-fill: #dbff66;
+    -fx-font-size: 26px;
     -fx-font-weight: bold;
     -fx-padding: 0 0 18 6;
 }
 
 /* Botones del menú lateral */
-.menu .button {
-    -fx-background-color: rgba(255, 255, 255, 0.08);
-    -fx-text-fill: #FFF8E7;
-    -fx-font-size: 15px;
+.boton-menu {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 16px;
     -fx-font-weight: bold;
-    -fx-pref-width: 175;
-    -fx-alignment: center-left;
-    -fx-padding: 11 16 11 16;
-    -fx-background-radius: 20;
+    -fx-pref-width: 210;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 14 22 14 22;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
     -fx-cursor: hand;
 }
 
 /* Efecto al pasar el mouse por el menú */
 .menu .button:hover {
     -fx-background-color: #F72585;
-    -fx-text-fill: white;
+    -fx-text-fill: #FFFFFF;
 }
 
 /* Cada pantalla central */
 .pagina {
-    -fx-padding: 26;
+    -fx-padding: 30;
     -fx-spacing: 14;
 }
 
@@ -51,7 +79,7 @@
 .titulo {
     -fx-font-size: 26px;
     -fx-font-weight: bold;
-    -fx-text-fill: #560BAD;
+    -fx-text-fill: #2ef70f;
 }
 
 /* Subtítulos */
@@ -61,7 +89,7 @@
     -fx-text-fill: #0096C7;
 }
 
-/* Botones de acción principales (Guardar, Registrar, etc.) */
+/* Botones de acción principales (Guardar, etc.) */
 .boton-principal {
     -fx-background-color: #7209B7;
     -fx-text-fill: white;
@@ -87,4 +115,165 @@
 
 .boton-peligro:hover {
     -fx-background-color: #B51724;
+}
+
+/* PANTALLA CENTRAL DE BIENVENIDA */
+.bienvenida {
+    -fx-padding: 30;
+}
+
+.icono-grande {
+    -fx-font-size: 64px;
+}
+
+.titulo-bienvenida {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.subtitulo-bienvenida {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}
+
+.tarjeta-pasos {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: #D90429;
+    -fx-border-width: 2;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-padding: 20 26 20 26;
+}
+
+.tarjeta-titulo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 6 0;
+}
+
+.texto-paso {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.texto-rojo {
+    -fx-text-fill: #FF3B5C;
+}
+
+.texto-blanco {
+    -fx-text-fill: #FFFFFF;
+}
+/* --- BOTONES ACTUALIZAR Y LIMPIAR (Estilo circo) --- */
+.boton-actualizar {
+    -fx-background-color: #0096C7; /* Turquesa acrobático */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 9 18 9 18;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.boton-actualizar:hover {
+    -fx-background-color: #0077B6;
+}
+
+.boton-limpiar {
+    -fx-background-color: #F59E0B; /* Dorado / Ámbar espectáculo */
+    -fx-text-fill: #1A052A;
+    -fx-font-weight: bold;
+    -fx-padding: 9 18 9 18;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.boton-limpiar:hover {
+    -fx-background-color: #D97706;
+    -fx-text-fill: white;
+}
+
+/* --- TABLA ESTILO CIRCO (Encabezado púrpura/dorado y filas rojo/blanco) --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #D90429;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* Encabezado de columnas (Nombre, Alias, Correo) */
+.table-view .column-header-background {
+    -fx-background-color: #2A0845;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #2A0845;
+    -fx-border-color: #FFD166;
+    -fx-border-width: 0 1 2 0;
+    -fx-size: 38;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #FFD166;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+/* Fila impar: ROJO CIRCO con letra blanca */
+.table-row-cell:odd {
+    -fx-background-color: #D90429;
+}
+.table-row-cell:odd .table-cell {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+/* Fila par: BLANCO con letra oscura */
+.table-row-cell:even {
+    -fx-background-color: #FFFFFF;
+}
+.table-row-cell:even .table-cell {
+    -fx-text-fill: #1E1E1E;
+    -fx-font-weight: bold;
+}
+
+/* Fila seleccionada al hacer clic */
+.table-row-cell:selected {
+    -fx-background-color: #FFD166;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #2A0845;
+}
+
+
+/* LISTAS ESTILO CIRCO */
+.list-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D90429;
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 4;
+}
+
+.list-cell:filled:odd {
+    -fx-background-color: #D90429;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+}
+
+.list-cell:filled:even {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #1E1E1E;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+}
+
+/* Fila seleccionada al hacer clic: DORADO con letra púrpura */
+.list-cell:filled:selected {
+    -fx-background-color: #FFD166;
+    -fx-text-fill: #2A0845;
+    -fx-font-weight: bold;
 }

@@ -10,6 +10,7 @@ public class App extends Application {
     @Override
 
     public void start(Stage ventana) throws Exception {
+        Conexion.crearTablas();
         FXMLLoader cargador = new FXMLLoader(App.class.getResource("principal.fxml"));
         Scene escena = new Scene(cargador.load(), 1000, 650);
         escena.getStylesheets().add(App.class.getResource("estilos.css").toExternalForm());

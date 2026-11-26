@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns:fx="http://javafx.com" styleClass="pagina">
-    <Label text="Equipos (en construcción)" styleClass="titulo"/>
-</VBox>
+<VBox spacing="12" styleClass="pagina" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="co.edu.upn.arena.EquipoController">
 
+    <Label styleClass="titulo" text="Equipos" />
+
+    <HBox spacing="8">
+        <TextField fx:id="txtNombre" promptText="Nombre del equipo" prefWidth="200"/>
+        <TextField fx:id="txtJuego" promptText="Disciplina" prefWidth="200"/>
+        <Button  onAction="#crear" styleClass="boton-principal" text="Crear equipo" />
+    </HBox>
+
+    <HBox spacing="16" VBox.vgrow="ALWAYS">
+        <VBox spacing="6">
+            <Label styleClass="subtitulo" text="1. Elige un equipo" />
+            <ListView fx:id="listaEquipos" onMouseClicked="#verIntegrantes" prefHeight="105.0" prefWidth="248.0" />
+        </VBox>
+        <VBox spacing="6">
+            <Label styleClass="subtitulo" text="Integrantes (máx. 3)" />
+            <ListView fx:id="listaIntegrantes" prefHeight="107.0" prefWidth="248.0" />
+            <Button onAction="#quitar" text="Quitar del equipo" styleClass="boton-peligro" />
+        </VBox>
+        <VBox spacing="6">
+            <Label styleClass="subtitulo" text="2. Jugadores sin equipo" />
+            <ListView fx:id="listaLibres" prefHeight="112.0" prefWidth="248.0" />
+            <Button onAction="#agregar" styleClass="boton-principal" text="Agregar al equipo" />
+        </VBox>
+    </HBox>
+</VBox>
